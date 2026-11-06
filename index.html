@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pazanda | Mazali taomlar olami</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar container">
+            <a href="#" class="logo">🍳 Pazanda</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#categories">Kategoriyalar</a></li>
+                <li><a href="#recipes">Retseptlar</a></li>
+                <li><a href="#about">Biz haqimizda</a></li>
+                <li><a href="#contact">Bog‘lanish</a></li>
+            </ul>
+
+            <a href="#recipes" class="nav-btn">Retseptlarni ko‘rish</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="subtitle">❤️ Mazali taomlar olamiga xush kelibsiz!</span>
+
+                <h1>Har bir taomda <span>mehr</span> va mahorat!</h1>
+
+                <p>
+                    Eng mazali milliy va xorijiy taomlar retseptlari.
+                    Biz bilan yangi taomlar tayyorlashni o‘rganing
+                    va oshpazlik mahoratingizni oshiring!
+                </p>
+
+                <a href="#recipes" class="main-btn">Retseptlarni boshlash →</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900"
+                     alt="Mazali taom">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories container" id="categories">
+        <div class="section-title">
+            <span>Bizning bo‘limlar</span>
+            <h2>Taom kategoriyalari</h2>
+            <p>O‘zingizga yoqqan kategoriyani tanlang</p>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <div>🍲</div>
+                <h3>Milliy taomlar</h3>
+                <p>An'anaviy o‘zbek taomlari</p>
+            </div>
+
+            <div class="category-card">
+                <div>🍕</div>
+                <h3>Fast Food</h3>
+                <p>Tez tayyorlanadigan taomlar</p>
+            </div>
+
+            <div class="category-card">
+                <div>🍰</div>
+                <h3>Shirinliklar</h3>
+                <p>Mazali tort va desertlar</p>
+            </div>
+
+            <div class="category-card">
+                <div>🥗</div>
+                <h3>Salatlar</h3>
+                <p>Foydali va mazali salatlar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes -->
+    <section class="recipes" id="recipes">
+        <div class="container">
+            <div class="section-title">
+                <span>Eng sara retseptlar</span>
+                <h2>Mashhur taomlar</h2>
+                <p>Foydalanuvchilarimiz eng ko‘p yoqtirgan retseptlar</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput"
+                       placeholder="Taom nomini qidiring...">
+                <button onclick="searchRecipes()">🔍 Qidirish</button>
+            </div>
+
+            <div class="recipe-grid" id="recipeGrid">
+
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza">
+                    <div class="recipe-info">
+                        <span class="tag">Fast Food</span>
+                        <h3>Italyancha Pizza</h3>
+                        <p>🍽️ Mazali pishloqli va sabzavotli pizza.</p>
+                        <div class="recipe-bottom">
+                            <span>⏱ 40 daqiqa</span>
+                            <button onclick="showRecipe('Italyancha Pizza')">Retsept →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Osh">
+                    <div class="recipe-info">
+                        <span class="tag">Milliy taom</span>
+                        <h3>O‘zbek palovi</h3>
+                        <p>🍚 An'anaviy va xushbo‘y o‘zbek palovi.</p>
+                        <div class="recipe-bottom">
+                            <span>⏱ 90 daqiqa</span>
+                            <button onclick="showRecipe('O‘zbek palovi')">Retsept →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Tort">
+                    <div class="recipe-info">
+                        <span class="tag">Shirinlik</span>
+                        <h3>Shokoladli tort</h3>
+                        <p>🍰 Yumshoq va mazali shokoladli tort.</p>
+                        <div class="recipe-bottom">
+                            <span>⏱ 60 daqiqa</span>
+                            <button onclick="showRecipe('Shokoladli tort')">Retsept →</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about container" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800"
+                 alt="Oshxona">
+        </div>
+
+        <div class="about-text">
+            <span class="subtitle">Biz haqimizda</span>
+            <h2>Pazanda — mazali taomlar maskani!</h2>
+            <p>
+                Pazanda — pazandachilikka qiziquvchilar uchun
+                yaratilgan zamonaviy platforma. Saytimiz orqali
+                milliy va xorijiy taomlar, shirinliklar, salatlar
+                va ichimliklar tayyorlashni o‘rganishingiz mumkin.
+            </p>
+            <a href="#contact" class="main-btn">Biz bilan bog‘lanish</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <span>Biz bilan aloqa</span>
+                <h2>Bizga xabar yuboring</h2>
+            </div>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Ismingiz" required>
+                <input type="email" placeholder="Email manzilingiz" required>
+                <textarea placeholder="Xabaringiz..." required></textarea>
+                <button type="submit" class="main-btn">Xabar yuborish</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <h2>🍳 Pazanda</h2>
+            <p>Har bir taomda mehr, har bir retseptda mahorat!</p>
+            <p class="copyright">© 2026 Pazanda. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
